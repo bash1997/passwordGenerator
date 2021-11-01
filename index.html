@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<head>
+    <title>PSSWORD GENERATOR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body class="flex">
+    <div class="container flex">
+        <h1>Random Password Generator</h1>
+        <div class="output flex">
+            <input id="output" class="flex" type="text" placeholder="Create Password" readonly>
+        </div>
+
+        <form class="flex">
+            <div class="length flex">
+                <label for="length">Password length:</label>
+                <input type="number" name="length" id="length" min="8" max="32" value="15">
+            </div>
+            
+            <div class="option flex">
+                <label for="upper">ABC</label>
+                <input type="checkbox" name="upper" id="upper" value="uppercase" checked>
+                <span class="checkmark flex"></span>
+            </div>
+
+            <div class="option flex">
+                <label for="lower">abc</label>
+                <input type="checkbox" name="lower" id="lower" value="lowercase">
+                <span class="checkmark flex"></span>
+            </div>
+
+            <div class="option flex">
+                <label for="symbols">#%!</label>
+                <input type="checkbox" name="symbols" id="symbols" value="symbols"checked>
+                <span class="checkmark flex"></span>
+            </div>
+
+            <div class="option flex">
+                <label for="nums">123</label>
+                <input type="checkbox" name="nums" id="nums" value="numchars"checked>
+                <span class="checkmark flex"></span>
+            </div>
+            
+            <div class="generate flex">
+                <button type="button" onclick="generator()"><p>Generator</p></button>
+                <button type="button" onclick="copy()" data-toggle="tooltip" data-placement="bottom" title="Copy Password"><p>Copy</p></button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./script.js" defer></script>
+</body>
+</html>
